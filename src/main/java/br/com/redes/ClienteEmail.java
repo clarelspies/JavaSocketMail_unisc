@@ -155,6 +155,7 @@ public class ClienteEmail extends javax.swing.JFrame {
 	private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {
 
 		try {
+			log.setText("");
 			int delay = 1000;
 			String username = Base64.getEncoder().encodeToString(remetente.getText().getBytes(StandardCharsets.UTF_8));
 			String password = Base64.getEncoder().encodeToString(senha.getText().getBytes(StandardCharsets.UTF_8));
@@ -218,7 +219,7 @@ public class ClienteEmail extends javax.swing.JFrame {
 
 	private void envia(String text) throws IOException {
 		dos.writeBytes(text);
-		log.setText(log.getText() + "\nCliente: " + text);
+		log.setText(log.getText() + "\nCLIENTE: " + text);
 	}
 
 	/**
